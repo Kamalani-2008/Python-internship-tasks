@@ -1,68 +1,154 @@
-# Python Internship Tasks
+# Python Programming Internship — Oasis Infobyte
 
-A collection of five beginner-friendly Python projects developed as part of my internship learning experience. These projects demonstrate fundamental programming concepts, problem-solving skills, and practical applications of Python.
+This repository contains five Python programming tasks completed as part of my Python Programming Internship. Each project demonstrates practical programming concepts, logical thinking, input validation, and problem-solving skills.
 
-## Tasks Completed
+## Projects
 
-### Task 1: Simple Calculator
-A command-line calculator that performs basic arithmetic operations:
+### 1. Secure Password Generator
+**Folder:** `task-1-password-generator/`
+
+A Python application that generates secure, customizable passwords using different character types.
+
+**Key Concepts:**
+- Strings and character sets
+- Secure random selection using Python's `secrets` module
+- Functions and input validation
+
+**Features:**
+- Custom password length
+- Lowercase and uppercase letters
+- Numbers and special characters
+- Secure password generation
+
+### 2. Number Guessing Game
+**Folder:** `task-2-number-guessing-game/`
+
+An interactive game in which the user guesses a randomly generated number within a specified range.
+
+**Key Concepts:**
+- User input
+- Loops and conditional statements
+- Comparison logic
+- Input validation
+
+**Features:**
+- Random number generation
+- Higher-or-lower hints
+- Attempt counting
+- Invalid input handling
+
+### 3. Simple Calculator
+**Folder:** `task-3-simple-calculator/`
+
+A Python calculator that performs basic arithmetic operations based on user input.
+
+**Key Concepts:**
+- Arithmetic operators
+- Functions and conditional statements
+- Input validation
+- Error handling
+
+**Features:**
 - Addition
 - Subtraction
 - Multiplication
 - Division
+- Division-by-zero handling
 
-**Concepts:** Functions, operators, user input, and exception handling.
+### 4. To-Do List
+**Folder:** `task-4-todo-list/`
 
-### Task 2: Number Guessing Game
-A fun interactive game in which the computer generates a random number and the user attempts to guess it using higher-or-lower hints.
+A menu-driven application for organizing and managing daily tasks.
 
-**Concepts:** Loops, conditional statements, random numbers, and input validation.
+**Key Concepts:**
+- Lists and dictionaries
+- Functions
+- Loops and conditional statements
+- Menu-driven logic
 
-### Task 3: Password Generator
-Generates a random password containing uppercase letters, lowercase letters, numbers, and special characters.
+**Features:**
+- Add tasks
+- View tasks
+- Mark tasks as completed
+- Delete tasks
 
-**Concepts:** Python modules, strings, randomness, and functions.
+### 5. Weather App
+**Folder:** `task-5-weather-app/`
 
-### Task 4: To-Do List Manager
-A command-line application that allows users to add, view, and remove tasks.
+A Python application that retrieves current weather information for a city using the Open-Meteo API.
 
-**Concepts:** Lists, loops, conditional statements, and list operations.
+**Key Concepts:**
+- API concepts
+- HTTP requests
+- JSON data parsing
+- Displaying retrieved information
+- Error handling
 
-### Task 5: BMI Calculator
-Calculates Body Mass Index using the user's weight and height and displays a general BMI category.
+**Features:**
+- Search weather by city name
+- Display temperature
+- Display feels-like temperature
+- Show humidity and wind speed
+- Display weather conditions
 
-**Concepts:** Mathematical operations, functions, conditional statements, and input validation.
+The application uses the Open-Meteo API, which does not require an API key for this project.
 
 ## Technologies Used
 
-- Python 3
-- Python Standard Library
-- Visual Studio Code
+- **Programming Language:** Python
+- **Libraries and Modules:** `secrets`, `string`, `random`, `json`, `urllib`
+- **Tools:** Git and GitHub
+- **API:** Open-Meteo Weather API
 
-## How to Run
+## Learning Outcomes
 
-1. Install Python 3.
+Through these projects, I practiced:
+
+- Writing structured and reusable Python code
+- Applying conditional statements and loops
+- Working with lists, dictionaries, and strings
+- Validating user input and handling errors
+- Generating secure passwords
+- Retrieving and processing data from an external API
+- Managing source code using GitHub
+
+## Repository Structure
+
+```text
+python-internship-tasks/
+├── README.md
+├── task-1-password-generator/
+│   └── password_generator.py
+├── task-2-number-guessing-game/
+│   └── number_guessing_game.py
+├── task-3-simple-calculator/
+│   └── calculator.py
+├── task-4-todo-list/
+│   └── todo_list.py
+└── task-5-weather-app/
+    └── weather_app.py
+```
+
+## How to Run the Projects
+
+1. Install Python 3 on your computer.
 2. Clone or download this repository.
-3. Open the project folder in Visual Studio Code or a terminal.
-4. Navigate to the folder of the task you want to execute.
-5. Run the corresponding Python file.
+3. Open a terminal in the required project folder.
+4. Run the corresponding Python file.
 
 Example:
 
 ```bash
-python calculator.py
+python password_generator.py
 ```
 
-Use the appropriate Python filename for each task.
+For the Weather App, an active internet connection is required to retrieve weather information.
 
-## Learning Outcomes
+## Acknowledgment
 
-Through these projects, I practised writing Python programs, handling user input, implementing conditional logic and loops, using functions and lists, validating inputs, and solving simple real-world problems.
+I am grateful to **Oasis Infobyte** for providing an opportunity to strengthen my Python programming knowledge through practical tasks and hands-on learning.
 
-## Author
+---
 
-**Gandavarapu Kamalani Sri**
-
-## License
-
-Created for educational and internship learning purposes.
+**Internship:** Python Programming Internship  
+**Organization:** Oasis Infobyte

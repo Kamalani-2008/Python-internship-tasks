@@ -1,35 +1,47 @@
 
+import secrets
+import string
+
+
+def generate_password(length):
+    if length < 4:
+        raise ValueError("Password length must be at least 4.")
+
+    # Ensure the password contains each character type.
+    password_chars = [
+        secrets.choice(string.ascii_lowercase),
+        secrets.choice(string.ascii_uppercase),
+        secrets.choice(string.digits),
+        secrets.choice(string.punctuation),
+    ]
+
+    all_chars = (
+        string.ascii_letters
+        + string.digits
+        + string.punctuation
+    )
+
+    # Fill the remaining positions securely.
+    for _ in range(length - 4):
+        password_chars.append(secrets.choice(all_chars))
+
+    # Securely shuffle the characters.
+    secrets.SystemRandom().shuffle(password_chars)
+
+    return "".join(password_chars)
+
+
 def main():
-    print("=== Simple Calculator ===")
-    print("1. Addition (+)")
-    print("2. Subtraction (-)")
-    print("3. Multiplication (*)")
-    print("4. Division (/)")
+    print("=== Secure Password Generator ===")
 
     try:
-        num1 = float(input("Enter the first number: "))
-        operator = input("Enter an operator (+, -, *, /): ")
-        num2 = float(input("Enter the second number: "))
+        length = int(input("Enter password length (minimum 4): "))
 
-        if operator == "+":
-            result = num1 + num2
-        elif operator == "-":
-            result = num1 - num2
-        elif operator == "*":
-            result = num1 * num2
-        elif operator == "/":
-            if num2 == 0:
-                print("Error: Cannot divide by zero.")
-                return
-            result = num1 / num2
-        else:
-            print("Invalid operator!")
-            return
+        password = generate_password(length)
+        print("Generated password:", password)
 
-        print("Result:", result)
-
-    except ValueError:
-        print("Please enter valid numbers.")
+    except ValueError as error:
+        print("Error:", error)
 
 
 if __name__ == "__main__":
